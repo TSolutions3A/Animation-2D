@@ -1,0 +1,273 @@
+body {
+    position: relative;
+    background-image: linear-gradient(to right, #d54150, #ec8230);
+}
+
+.animation {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.plane-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+}
+*
+{
+    scroll-behavior: smooth;
+}
+.plane-container img {
+    width: 150px;
+    height: 90px;
+    animation: plane-move 5s infinite linear;
+}
+
+@keyframes plane-move {
+    0% {
+        transform: translateY(30px);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+.cloud1 {
+    position: absolute;
+    top: 10%;
+}
+
+.cloud4 {
+    position: absolute;
+    top: 15%;
+    transform: translateX(-400%);
+}
+
+.cloud2 {
+    position: absolute;
+    top: 49%
+}
+
+.cloud3 {
+    position: absolute;
+    bottom: 12%
+}
+
+.fast {
+    animation: cloud-move 18s infinite linear;
+}
+
+.medium {
+    animation: cloud-move 21s infinite linear;
+}
+
+.lazy {
+    animation: cloud-move 23s infinite linear;
+}
+
+.fast1 {
+    animation: cloud1-move 28s infinite linear;
+}
+
+.medium1 {
+    animation: cloud1-move 21s infinite linear;
+}
+
+.lazy1 {
+    animation: cloud1-move 23s infinite linear;
+}
+
+.normal {
+    width: 130px;
+}
+
+.big {
+    width: 180px;
+}
+
+.small {
+    width: 80px;
+}
+
+@keyframes cloud-move {
+    0% {
+        left: 120%;
+    }
+
+    100% {
+        left: -20%;
+    }
+}
+
+@keyframes cloud1-move {
+    0% {
+        left: 180%;
+    }
+
+    100% {
+        left: -60%;
+    }
+}
+
+.mobile {
+    height: 100vh;
+    padding: 0 100px;
+}
+
+.tryppn img{
+    
+    width: 150px;
+}
+.body{
+    height: calc(100vh - 150px);
+}
+.btn-container h1{
+    font-family: Outfit;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 63px;
+    text-align: left;
+    color: white;
+    font-style: italic;
+}
+.btn {
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.btn-white{
+}
+.btn img {
+    width: 170px;
+    margin-right: 10px;
+}
+.btn-black img{
+    width: 152px;
+}
+.h100{
+    height: 100%;
+}
+.btn-container h2, .btn-container p{
+    line-height: 1;
+}
+.main-container{
+    width: 240px;
+    height: 490px;
+    position: relative;
+}
+.main{
+    width: 100%;
+    height: 100%;
+}
+.main-container video{
+    z-index: 999;
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    right: 10px;
+    bottom: 10px;
+    width: 227px;
+    height: 482px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+.justify-right{
+    justify-content: right;
+}
+.playbtn{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2000;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+}
+.playbtn i{
+    font-size: 30px;
+    color: dodgerblue;
+}
+.scrollDown{
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 21px;
+    height: 46px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    bottom: 11px;
+    transform: translateX(-50%);
+    padding: 7px 0;
+}
+.scrollDown div{
+    width: 2px;
+    background-color: white;
+    animation: scrollDown 2s infinite;
+}
+
+@keyframes scrollDown{
+    0%{
+        height: 7px;
+    }
+    50%{
+        height: 100%;
+    }
+    100%{
+        height: 7px;
+    }
+}
+.fa-caret-up{
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    left: 50%;
+    bottom: 11px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.front{
+    width: 68px;
+    position: absolute;
+    z-index: 11111;
+    height: 17px;
+    top: 9px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 216px;
+    background-color: black;
+}
+.front img{
+    position: absolute;
+    top: 2px;
+    left: 73%;
+    background-color: white;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+.bottom{
+    position: absolute;
+    z-index: 11111;
+    height: 4px;
+    bottom: 13px;
+    left: 80px;
+    border-radius: 216px;
+    background-color: black;
+    width: 83px;
+}
+
+@font-face {
+    font-family: 'Outfit'; /* Name you want to use in your CSS */
+    src: url('./outfit/OutfitRegular.ttf') format('truetype');
+}

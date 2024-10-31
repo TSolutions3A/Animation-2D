@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trppyn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./basic.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="animation">
+        <div class="plane-container">
+            <img class="plane" src="./plane.png" alt="">
+        </div>
+        <img class="small cloud1 fast" src="./cloud.png" alt="">
+        <img class="small cloud4 fast1" src="./cloud.png" alt="">
+        <img class="normal cloud2 medium" src="./cloud.png" alt="">
+        <img class="big cloud3 lazy" src="./cloud.png" alt="">
+        <div class="scrollDown flex-side justify-center" onclick="scrollDown()">
+            <div>
+
+            </div>
+        </div>
+    </div>
+    <div class="mobile">
+        <div class="heading">
+            <div class="container">
+                <div class="row flex-row justify-right">
+                    <h1 class="tryppn text-right" ><img src="./trppynlogo.png" /></h1>
+                </div>
+            </div>
+        </div>
+        <div class="body flex-row">
+            <div class="container">
+                <div class="row flex-row">
+                    <div class="col-12 flex-row">
+                        <div class="col-6 flex-row">
+                            <div class="btn-container">
+                                <h1>The worst part of <br> vacation should be<br>the end.</h1>
+                                <div class="btn-group flex-row">
+                                    <a href="https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox&gl=US&pli=1" class="btn btn-white flex-row">
+                                        <img src="./googlePlay.png" alt="google play">
+                                    </a>
+                                    <a href="https://apps.apple.com/us/app/google/id284815942?ct=p-pmm-web-Lensmktg-Lens&mt=8&pt=9008" class="btn flex-row btn-black">
+                                        <img src="./appStore.svg" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 flex-row justify-center">
+                            <div class="main-container">
+                                <img class="main" src="./main.png" alt="">
+
+                                <video id="aaaa">
+                                    <source src="simple.mp4" type="video/mp4">
+                                </video>
+
+                                <div class="playbtn" onclick="playerhandle(this)">
+                                    <i class="fa fa-play"></i>
+                                </div>
+                                <div class="front">
+                                    <img src="images.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <i class="fa fa-caret-up" onclick="scrollUp()"></i>
+    </div>
+</body>
+<script>
+
+    const scrollDown = () => {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    const scrollUp = () => {
+        window.scrollTo(0, 0);
+    }
+
+const playerhandle = (obj) => {
+    document.getElementById("aaaa").play();
+    obj.style.display = "none";
+}
+
+</script>
+</html>
